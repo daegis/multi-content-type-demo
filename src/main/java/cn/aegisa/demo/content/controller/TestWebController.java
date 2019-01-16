@@ -34,4 +34,12 @@ public class TestWebController {
         log.info("入参值：{}", JSON.toJSONString(person));
         return person;
     }
+
+    @RequestMapping("/post")
+    public Person testCustom(Person person, HttpServletRequest request) {
+        String contentType = request.getHeader("content-type");
+        log.info("Content-Type:" + contentType);
+        log.info("入参值：{}", JSON.toJSONString(person));
+        return person;
+    }
 }

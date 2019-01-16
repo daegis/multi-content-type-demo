@@ -8,7 +8,7 @@ import lombok.Data;
  * @since 2019-01-14 15:54
  */
 @Data
-public class Person {
+public class Person implements PostEntity {
     private String name;
     private Integer age;
 }
